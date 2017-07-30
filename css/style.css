@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,500');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Sarala:400,700');
+
+    .parallax-container {
+      height:600px!important; 
+       width:100%;
+    }
+        
+.siguiente{
+    height: 100%;
+    width: 40px;
+    z-index: 22;
+    position: absolute;
+    right: 0px;
+    margin: 0px;
+    background-color: white;
+    opacity: .2;
+    border: none;
+    color: black;
+    font-family: "Raleway";
+    font-weight: 700;
+}
+.anterior{
+    height: 100%;
+    width: 40px;
+    z-index: 22;
+    position: absolute;
+    left: 0px;
+    margin: 0px;
+    background-color: white;
+    opacity: .2;
+    border: none;
+    color: black;
+    font-family: "Raleway";
+    font-weight: 700;
+}
+.contactanos{
+   height: 250px !important;
+    
+}
+.fondoBlanco{
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: red;
+    z-index: 0;
+    position: absolute;
+    opacity: .5;
+}
+.imagen1{
+    background-image: url("../img/Electrodomesticos.jpg");
+    background-size: cover;
+}
+.imagen2{
+    background-image: url("../img/Muebles.jpg");
+    background-size: cover;
+}
+.imagen2 > h2  {
+    font-size: 30px !important;
+}
+.imagen2 > p{
+    font-size: 20px !important;
+}
+
+.imagen3{
+    background-image: url("../img/Iluminacion.jpg");
+    background-size: cover;
+}
+
+.imagen4{
+    background-image: url("../img/oferta2.jpg");
+    background-size: cover;
+}
+.carousel > div > a{
+    background-color: transparent !important;
+    border: 1px solid white;
+    width: 200px;
+}
+.carousel > div > a:hover{
+    width: 400px !important;
+}
+
+
+
+body{
+    background-color: #eaeaea !important;
+    font-family: "Open Sans" !important;
+}
+.nav .nav-wrapper{
+    background-color: white;
+    padding-top: 15px;
+}
+.nav .nav-wrapper ul li{
+    margin-top: -20px;
+}
+.nav .nav-wrapper .brand-logo img{
+    width: 300px;
+    margin-top:-30px;
+}
+.nav .nav-wrapper *{
+    color: black;
+}
+.nav li a{
+    height: 70px !important;
+}
+
+.nav li a span {
+    margin-top: 10px;
+    position:  fixed
+}
+
+.side-nav .divider{
+    margin: 0px !important;
+}
+
+ .side-nav{
+    width:90% !important;
+}
+
+.side-nav .background img{
+    width:80%;
+    margin-left: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transform:translateX(-50%);
+}
+.side-nav span {
+    font-size: 25px;
+    
+}
+
+nav .side-nav .collapsible {
+    color: black;
+    font-size: 25px;
+
+    
+}
+nav .side-nav .collapsible .collapsible-header {
+      padding-left: 30px; 
+      height: 70px !important;
+      padding-top: 8px;
+}
+
+nav .side-nav .collapsible .collapsible-body {
+      padding-left: 30px; 
+    
+}
+
+nav .side-nav .collapsible .collapsible-body .collapsible  .collapsible-header{
+      font-size: 20px;
+}
+nav .side-nav .collapsible .collapsible-body .collapsible .collapsible-body span{
+      font-size: 18px;
+      color: black;
+}
+
+footer{
+    background-color: #151515 !important;
+}
+footer img{
+    width: 300px;
+}
+
+
+
+
+
+
+/*LOGO MERCADO CHINO footer*/
+footer .mercadochino{
+    font-size: 38px;
+}
+footer .mercadochino  part{
+    margin: 0px -4px;
+    font-family: 'Sarala', sans-serif;
+}
+footer .mercadochino .mc2{
+    color: red;
+}
+
+
+/*LOGO MERCADO CHINO header*/
+header .mercadochino{
+    font-size: 30px;
+    width: 250px;
+    /*! padding: 0px; */
+    margin-top: -16px;
+}
+header .mercadochino  part{
+    padding: 0px;
+    margin: 0px;
+    margin: 0px -4px;
+    font-family: 'Sarala', sans-serif;
+}
+header .mercadochino .mc2{
+    color: red;
+}
+
+
+/*LOGO MERCADO CHINO .side-nav*/
+.side-nav .mercadochino{
+    font-size: 38px;
+    color: black;
+    width: 100%;
+    text-align: center;
+    padding: 25px 0px;
+}
+.side-nav .mercadochino  part{
+    margin: 0px -4px;
+    font-family: 'Sarala', sans-serif;
+}
+
+.side-nav .mercadochino .mc2{
+    color: red;
+}
+
+
+.btn-enviar{
+    width: 100px !important;
+    height: 100px !important;
+    position: absolute !important;
+    left: 40%;
+}
+
+footer .mapa{
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+@media only screen and (max-width: 1000px) {
+   .nav{
+        height: 100px;
+    }
+   .nav .nav-wrapper{
+       padding-top: 18px;
+    }
+    .nav .nav-wrapper .brand-logo img{
+       width: 300px;
+       margin-top:0px;
+    }
+    .siguiente{
+        width: 80px;
+    }
+    .anterior{
+        width: 80px;
+    }
+
+    
+
+        /*LOGO MERCADO CHINO header*/
+    header .mercadochino{
+        font-size: 30px;
+        width: 250px;
+        /*! padding: 0px; */
+        margin-top: 5px;
+    }
+    header .mercadochino  part{
+        padding: 0px;
+        margin: 0px;
+        margin: 0px -4px;
+        font-family: 'Sarala', sans-serif;
+    }
+    header .mercadochino .mc2{
+        color: red;
+    }
+
+    .section{
+        font-size: 30px;
+        text-align: justify;
+    }
+    
+    form *{
+        font-size: 30px !important;
+    }
+    
+    form input{
+        height: 80px !important;
+    }
+    
+   
+    .btn-enviar{
+        width: 150px !important;
+        height: 150px !important;
+        position: absolute !important;
+        left: 40%;
+    }
+    
+    footer{
+        font-size: 25px;
+    }
+    footer .links{
+       margin-top: 50px !important;
+    }
+
+
+}
