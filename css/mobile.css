@@ -1,0 +1,137 @@
+
+@media only screen and (max-width: 1000px) {
+    .mobile{
+        display: inline;
+    }
+    
+   .nav{
+        height: 100px;
+    }
+   .nav .nav-wrapper{
+       padding-top: 18px;
+    }
+    .nav .nav-wrapper .brand-logo img{
+       width: 300px;
+       margin-top:0px;
+    }
+    .siguiente{
+        width: 80px;
+    }
+    .anterior{
+        width: 80px;
+    }
+
+    
+    
+ 
+
+        /*LOGO MERCADO CHINO header*/
+    header .mercadochino{
+        font-size: 30px;
+        width: 250px;
+        /*! padding: 0px; */
+        margin-top: 5px;
+    }
+    header .mercadochino  part{
+        padding: 0px;
+        margin: 0px;
+        margin: 0px -4px;
+        font-family: 'Sarala', sans-serif;
+    }
+    header .mercadochino .mc2{
+        color: red;
+    }
+
+    #mercadoChinoPrincipal{
+        position: absolute;
+        width: 100%;
+        font-size: 80px;
+        top: 20%;
+        text-align: center;
+        color: white;
+    }
+    
+    
+    
+    
+    .section{
+        font-size: 30px;
+        text-align: justify;
+    }
+    
+    .imagen1{
+        background-position-x: 80%;
+    }
+    .imagen2{
+        background-position-x: 40%;
+    }
+    .imagen3{
+        background-position-x: 80%;
+    }
+    .imagen4{
+        background-position-x: 10%;
+    }
+    
+    form *{
+        font-size: 30px !important;
+    }
+    
+    form input{
+        height: 80px !important;
+    }
+    
+   
+    .btn-enviar{
+        width: 150px !important;
+        height: 150px !important;
+        position: absolute !important;
+        left: 40%;
+    }
+    
+    
+    
+    .down1{
+      position: absolute;
+      background:transparent;
+      width: 100px;
+      height: 100px;
+      bottom: 100px;
+      left: 50%;
+      transform: translate(-50%);
+      border: 1px solid white;
+      border-radius: 50%;
+      color: white;
+      z-index: 50;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    footer{
+        font-size: 25px;
+    }
+    footer .links{
+       margin-top: 50px !important;
+    }
+
+    .principalParallax{
+  
+    }
+    .principalParallax .parallax-container{
+        height: 100% !important;
+    }
+    .principalParallax .parallax-container .parallax img{
+        /*! height: 100%; */
+        /*! width:  100%; */
+        margin: 0px;
+        /*! top: 0px !important; */
+        position: fixed;
+        transform: translateY(0px) !important;
+        left: 0px;
+    }
+}

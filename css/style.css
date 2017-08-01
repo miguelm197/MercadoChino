@@ -1,14 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,400,500');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Sarala:400,700');
 
-    .parallax-container {
-      height:600px!important; 
-       width:100%;
-    }
-        
+.activo{
+    display: inline-block;
+}
+.inactivo{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+
+
+.parallax-container {
+    height:600px!important; 
+    width:100%;
+}
+.principalParallax img{
+    width: 100%;
+}
+
 .siguiente{
     height: 100%;
     width: 40px;
@@ -119,6 +132,7 @@ body{
 
  .side-nav{
     width:90% !important;
+    z-index: 1000 !important;
 }
 
 .side-nav .background img{
@@ -158,13 +172,52 @@ nav .side-nav .collapsible .collapsible-body .collapsible .collapsible-body span
       color: black;
 }
 
+header{
+    position: fixed;
+    z-index: 45;
+    transition:all .5s;
+}
+.nav{
+    background-color: transparent !important;
+    transition:all .5s;   
+}
+.nav-wrapper ul li a{
+    transition:all .5s;    
+}
+.sombraUp{
+    position:  relative;
+    width: 100%;
+    height:0px;
+box-shadow: 0px 38px 199px 95px rgba(0,0,0,.51);
+    z-index: 1;
+}
+/*---------------------------------------------------------*/
+.navPrincipalSinShad{
+    box-shadow: none !important;
+    transition:all .5s;
+}
+.navPrincipal{
+    background:transparent !important;
+    border: none !important;   
+    transition:all .5s;
+    
+}
+.navPrincipalMenu li a{
+    color: white !important;
+    transition:all .5s;
+    
+}
+/*---------------------------------------------------------*/
+
+
+
+
 footer{
     background-color: #151515 !important;
 }
 footer img{
     width: 300px;
 }
-
 
 
 
@@ -230,72 +283,4 @@ footer .mapa{
     width: 100%;
     height: 300px;
     border: none;
-}
-
-@media only screen and (max-width: 1000px) {
-   .nav{
-        height: 100px;
-    }
-   .nav .nav-wrapper{
-       padding-top: 18px;
-    }
-    .nav .nav-wrapper .brand-logo img{
-       width: 300px;
-       margin-top:0px;
-    }
-    .siguiente{
-        width: 80px;
-    }
-    .anterior{
-        width: 80px;
-    }
-
-    
-
-        /*LOGO MERCADO CHINO header*/
-    header .mercadochino{
-        font-size: 30px;
-        width: 250px;
-        /*! padding: 0px; */
-        margin-top: 5px;
-    }
-    header .mercadochino  part{
-        padding: 0px;
-        margin: 0px;
-        margin: 0px -4px;
-        font-family: 'Sarala', sans-serif;
-    }
-    header .mercadochino .mc2{
-        color: red;
-    }
-
-    .section{
-        font-size: 30px;
-        text-align: justify;
-    }
-    
-    form *{
-        font-size: 30px !important;
-    }
-    
-    form input{
-        height: 80px !important;
-    }
-    
-   
-    .btn-enviar{
-        width: 150px !important;
-        height: 150px !important;
-        position: absolute !important;
-        left: 40%;
-    }
-    
-    footer{
-        font-size: 25px;
-    }
-    footer .links{
-       margin-top: 50px !important;
-    }
-
-
 }
