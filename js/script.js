@@ -21,6 +21,10 @@ $(document).ready(function () {
     mobileDetect();
     calcularPrincipal();
     calcularAparienciaNav();
+
+    $("html, body").animate({
+        scrollTop: 1
+    }, 1);
 });
 
 
@@ -82,8 +86,6 @@ function irInicio() {
 }
 
 function irSeccion1() {
-    console.log("hola")
-    alert("posicion")
     var posicion = $(".seccion1").offset().top;
     $("html, body").animate({
         scrollTop: posicion
@@ -102,9 +104,15 @@ function calcularPrincipal() {
         $(".principalParallax").height(ventana.alto);
         $(".portada").attr("src", "img/oferta1.jpg");
     } else {
-        var seccion1 = $(".seccion1").height();
-        $(".principalParallax").height(ventana.alto - seccion1);
-        $(".portada").attr("src", "img/Dormitorio2.jpg");
+        if (ventana.alto < 900) {
+            $(".principalParallax").height(ventana.alto);
+            $(".parallax-container").height(ventana.alto);
+            $(".portada").attr("src", "img/Dormitorio3.jpg");
+        } else {
+            var seccion1 = $(".seccion1").height();
+            $(".principalParallax").height(ventana.alto - seccion1);
+            $(".portada").attr("src", "img/Dormitorio2.jpg");
+        }
     }
 }
 
@@ -122,4 +130,5 @@ function calcularAparienciaNav() {
         $(".menuArriba").removeClass("navPrincipalMenu");
 
     }
+
 }

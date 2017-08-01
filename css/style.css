@@ -15,12 +15,14 @@
 
 
 .parallax-container {
-    height:600px!important; 
+    height:600px; 
     width:100%;
 }
 .principalParallax img{
     width: 100%;
 }
+/*asdasd*/
+
 
 .siguiente{
     height: 100%;
@@ -118,11 +120,11 @@ body{
     color: black;
 }
 .nav li a{
-    height: 70px !important;
+    height: 100px !important;
 }
 
 .nav li a span {
-    margin-top: 10px;
+    margin-top: 20px;
     position:  fixed
 }
 
@@ -143,20 +145,20 @@ body{
     transform:translateX(-50%);
 }
 .side-nav span {
-    font-size: 25px;
+    font-size: 45px;
     
 }
 
 nav .side-nav .collapsible {
     color: black;
-    font-size: 25px;
+    font-size: 45px;
 
     
 }
 nav .side-nav .collapsible .collapsible-header {
       padding-left: 30px; 
-      height: 70px !important;
-      padding-top: 8px;
+      height: 100px !important;
+      padding-top: 25px;
 }
 
 nav .side-nav .collapsible .collapsible-body {
@@ -165,10 +167,10 @@ nav .side-nav .collapsible .collapsible-body {
 }
 
 nav .side-nav .collapsible .collapsible-body .collapsible  .collapsible-header{
-      font-size: 20px;
+      font-size: 35px;
 }
 nav .side-nav .collapsible .collapsible-body .collapsible .collapsible-body span{
-      font-size: 18px;
+      font-size: 30px;
       color: black;
 }
 
