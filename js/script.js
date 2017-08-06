@@ -118,7 +118,8 @@ function calcularPrincipal() {
 
 
 function calcularAparienciaNav() {
-    var posicion_seccion1 = $(".seccion1").offset().top;
+    // var posicion_seccion1 = $(".seccion1").offset().top;
+    var posicion_seccion1 = $(".portadaPrincipal").height();
     if (ventana.posicion < posicion_seccion1) {
         $(".nav-wrapper").addClass("navPrincipal");
         $("nav").addClass("navPrincipalSinShad");

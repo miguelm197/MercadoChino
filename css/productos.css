@@ -1,0 +1,194 @@
+.portada{
+    height: 500px;
+    background: blue;
+}
+
+
+
+/*Menú desplegable IZQUIERDA*/
+.contenedor-sectores{
+    background-color: white;
+    margin: 15px 0px;
+}
+.contenedor-sectores .collapsible {
+    border: none;
+    box-shadow: none;
+}
+.contenedor-sectores .collapsible-header{
+    height: 55px;
+    padding-top: 15px;
+    font-size: 17px;
+}
+.contenedor-sectores .collapsible-body{
+    height: 50px;
+    padding-top: 12.5px !important;
+}
+.contenedor-sectores .collapsible-body a{
+    color: black;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+
+
+
+
+/*Carrito de compras DERECHA*/
+
+.carrito{
+ padding:1px 10px;
+ padding-bottom: 11px;
+}
+.carrito .tarjeta{
+    height: 150px;
+    margin-top: 10px;
+    background-color: #eaeaea;
+}
+.carrito .tarjeta .arriba{
+    height: 50%;
+}
+.carrito .tarjeta .arriba .imagen{
+    height: 100%;
+    background-image: url("../img/Dormitorio3.jpg");
+    background-size: cover;
+    background-position-y: -100px;
+}
+.carrito .tarjeta .abajo{
+    padding: 7px;
+}
+.carrito .tarjeta .abajo .renglonUp{
+    margin: 3px;
+}
+.carrito .tarjeta .abajo .renglonDown{
+    margin: 3px;
+}
+
+
+
+/*Articulos*/
+.contenedor-articulos{
+    padding: 10px !important;
+}
+.articulo{
+    padding: 10px !important;
+}
+.articulo .row{
+    margin: 0px;
+}
+.articulo  .arriba{
+    background-color: #eaeaea;
+    height: 300px;
+}
+.articulo .abajo{
+    padding: 5px;
+    height: 70px;
+    background-color: #e0e0e0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: .9em;
+}
+.articulo .arriba .derecha{
+    height: 100%;
+    padding: 0px;
+}
+.articulo .arriba .izquierda{
+    height: 100%;
+}
+.articulo .arriba .derecha .imagen{
+    position: relative;
+    height: 100%;
+    background-image: url("../img/productos/Cama.jpg");
+    background-position-x: -100px;
+    background-size: auto 100%;
+    transition: all 1s;
+}
+.articulo .arriba .derecha .imagen:hover{
+    width: 100%;
+    position: relative;
+    background-position-x: -100px;
+    background-size: auto 100%;
+    z-index: 5;
+    animation-name: vistaprevia;
+    transition: all 1s;
+}
+.articulo .arriba .izquierda .antes{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.articulo .arriba .izquierda .antes div{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-decoration: line-through;
+    font-size: .9em;
+    display: inline;
+    color: gray;
+}
+.articulo .arriba .izquierda .antes .monto{
+    margin-left: -3px;
+}
+.articulo .arriba .izquierda .descuento{
+    background-color: #e74444;
+    width: 45px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-left: 65px;
+    margin-top: 20px;
+    margin-bottom: -40px;
+    border-radius: 7px;
+    border-bottom-left-radius: 0px;
+}
+.articulo .arriba .izquierda .descuento div{
+    font-size: 0.7em;
+    font-weight: 700;
+    color:white;
+}
+.articulo .arriba .izquierda .ahora{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.articulo .arriba .izquierda .ahora .ahorita{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: .9em;
+    margin-bottom:-5px;
+}
+.articulo .arriba .izquierda .ahora .b{
+    font-size: 1.6em;
+    color: #e74444;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: 400;
+}
+.articulo .arriba .izquierda .ahora .moneda{
+    font-size: 1em;
+    font-weight: 700;
+}
+.articulo .arriba .izquierda  .vermas{
+    font-size: .7em;
+    width: 60px;
+    text-align: center;
+    color: white;
+    font-family: 'Century Gothic', sans-serif;
+    font-weight: 700;
+    background-color: green;
+    border-radius: 4px;
+    padding: 2px 2px;
+    left: 5px;
+    top: 30%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

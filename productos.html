@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MERCADO CHINO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar-fixed">
+
+            <nav class="nav navPrincipalSinShad">
+                <div class="nav-wrapper navPrincipal">
+                    <!-- Logo de la barra de arriba -->
+                    <a href="#" class="brand-logo center">
+                        <p class="mercadochino">
+                            <part class="mc1">Mercado</part>
+                            <part class="mc2">Chino</part>
+                            <part class="mc3">.Uy</part>
+                        </p>
+                    </a>
+
+                    <!-- Links de la barra de arriba -->
+                    <ul id="nav-mobile" class="right hide-on-med-and-down menuArriba navPrincipalMenu">
+                        <li><a onclick="irInicio()">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a onclick="irNosotros()">Nosotros</a></li>
+                        <li><a onclick="irContacto()">Contacto</a></li>
+                    </ul>
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
+                </div>
+
+                <!-- Menu desplegable del costado -->
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <div class="background">
+                            <p class="mercadochino">
+                                <part class="mc1">Mercado</part>
+                                <part class="mc2">Chino</part>
+                                <part class="mc3">.Uy</part>
+                            </p>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a href="#"><span class="">Inicio</span></a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header">Productos </div>
+                                <div class="collapsible-body">
+                                    <ul class="collapsible sectorizado " data-collapsible="accordion"></ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a href="#"><span class="">Nosotros</span></a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li><a href="#"><span class="">Contacto</span></a></li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="portadaPrincipal">
+            <div class="sombraUp"></div>
+            <div class="portada">
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- IZQUIERDA -->
+                <div class="col l2 m10 s12 offset-m1 columna-izquierda">
+                    <div class="row">
+                        <div class="contenedor-sectores" onclick="cargarProd()">
+                            Tocame
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="contenedor-sectores">
+                            <ul class="collapsible sectorizado" data-collapsible="accordion">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- CENTRO -->
+                <div class="col l8 m10 s12 offset-m1 columna-central">
+                    <div class="contenedor-sectores">
+                        <div class="row contenedor-articulos">
+
+
+                            <div class="articulo col s12 m10 offset-m1 l3">
+                                <div class="row arriba">
+                                    <div class="izquierda col s4 m6 l5">
+                                        <div class="antes">
+                                            <div class="anterior">ANTES</div>
+                                            <div class="moneda">$</div>
+                                            <div class="monto">900</div>
+                                        </div>
+                                        <div class="descuento">
+                                            <div class="monto inline">20</div>
+                                            <div class="porcentaje inline">%</div>
+                                            <div class="off">OFF</div>
+                                        </div>
+                                        <div class="ahora">
+                                            <div class="ahorita">AHORA</div>
+                                            <div class="moneda inline b">$</div>
+                                            <div class="monto inline b">549</div>
+                                        </div>
+                                        <div class="vermas">Ver más</div>
+                                    </div>
+                                    <div class="derecha col s8 m6 l7">
+                                        <div class="imagen"></div>
+                                    </div>
+                                </div>
+                                <div class="row abajo">
+                                    <span>Lámpara</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- DERECHA -->
+                <div class="col l2 m10 s12 offset-m2 columna-derecha">
+                    <div class="contenedor-sectores">
+
+                        <div class="row">
+                            <div class="carrito">
+
+                                <div class="row">
+                                    <div class="total center">
+                                        <span>Carrito</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+
+                                    <div class="tarjeta">
+                                        <div class="arriba">
+                                            <div class="imagen"></div>
+                                        </div>
+                                        <div class="abajo">
+                                            <div class="renglonUp">
+                                                <span>Cama 2 plazas Aligato</span>
+                                            </div>
+                                            <div class="renglonDown">
+                                                <span>$5000  2 Unid.  Total: $10.000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="tarjeta">
+                                        <div class="arriba">
+                                            <div class="imagen"></div>
+                                        </div>
+                                        <div class="abajo">
+                                            <div class="renglonUp">
+                                                <span>Cama 2 plazas Aligato</span>
+                                            </div>
+                                            <div class="renglonDown">
+                                                <span>$5000  2 Unid.  Total: $10.000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="tarjeta">
+                                        <div class="arriba">
+                                            <div class="imagen"></div>
+                                        </div>
+                                        <div class="abajo">
+                                            <div class="renglonUp">
+                                                <span>Cama 2 plazas Aligato</span>
+                                            </div>
+                                            <div class="renglonDown">
+                                                <span>$5000  2 Unid.  Total: $10.000</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="total">
+                                        <span>Total $30.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+
+                    <p class="mercadochino">
+                        <part class="mc1">Mercado</part>
+                        <part class="mc2">Chino</part>
+                        <part class="mc3">.Uy</part>
+                    </p>
+
+                    <p class="grey-text text-lighten-4">La tienda de articulos para el hogar más berreta
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12 links">
+                    <h5 class="white-text">Menú</h5>
+                    <ul>
+                        <div class="row">
+                            <div class="col m3 l3">
+                                <li><a class="grey-text text-lighten-3" onclick="irInicio()">Inicio</a></li>
+                            </div>
+
+                            <div class="col m3 l3">
+                                <li><a class="grey-text text-lighten-3" href="#!">Productos</a></li>
+                            </div>
+
+                            <div class="col m3 l3">
+                                <li><a class="grey-text text-lighten-3" onclick="irNosotros()">Nosotros</a></li>
+                            </div>
+
+                            <div class="col m3 l3">
+                                <li><a class="grey-text text-lighten-3" onclick="irContacto()">Contactos</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.2147097361164!2d-56.179754307219255!3d-34.88489086211549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDUzJzA1LjYiUyA1NsKwMTAnNDUuMSJX!5e0!3m2!1ses-419!2suy!4v1501436772615"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Copyright Miguel Merelli
+                <a class="grey-text text-lighten-4 right" href="#!">Más Links</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sincronizador.js"></script>
+</body>
+
+</html>

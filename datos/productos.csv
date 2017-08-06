@@ -1,0 +1,6 @@
+id,nombre,descripcion,precio,precioViejo,descuento,imagen,activo
+1,Cama de 2 plazas,"Cama c�moda para dormir, y so�ar con los angelitos, Hecho con madera china de m�xima calidad",15000,20000,20,cama.jpg,true
+2,Cortinas para ventana,Cortinas de diferentes colores para decorar. M�xima calidad con telas chinas.,8000,12000,0,cortinas.jpg,true
+3,Mesa ratona,"Para comer, apoyar cosas o dejarla vac�a. Perfecta para ver y acariciar.",5000,6000,30,mesa.jpg,true
+4,Puerta de madera,Puerta para poder pasar de una habitaci�n a otra. Madera de alta calidad.,9000,10000,50,puerta.jpg,true
+5,Silla de pl�stico,"Silla bonita para sentarse con comodidad. Elegante, perfecta para habitaci�nes modernas.",4000,6000,25,silla.jpg,true
