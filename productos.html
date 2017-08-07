@@ -13,6 +13,7 @@
 
 <body>
 
+
     <header>
         <div class="navbar-fixed">
 
@@ -83,6 +84,26 @@
         </div>
     </header>
     <main>
+
+
+        <div class="desplegarVista">
+            <!-- Element Showed -->
+            <a id="menu" class="btnVista waves-effect waves-light btn btn-floating red accent-4" onclick="activarVistaProductos()">
+                <i class="fa fa-th" aria-hidden="true"></i>
+            </a>
+
+            <!-- Tap Target Structure -->
+            <div class="tap-target red accent-4 circuloBtnVista" data-activates="menu">
+                <div class="tap-target-content">
+                    <h5>Producto</h5>
+                    <p>Presione aquí para volver a la vista de producto</p>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="portadaPrincipal">
             <div class="sombraUp"></div>
             <div class="portada">
@@ -90,6 +111,46 @@
         </div>
 
         <div class="container-fluid">
+            <div class="vistaArticulo inactivo">
+                <div class="fondoArticulo"></div>
+                <div class="contenedorArticulo">
+                    <div class="row portadaArticulo">
+                        <div class="imagen" id="imagenVP"></div>
+                    </div>
+                    <div class="row descripcionArticulo">
+                        <div class="titulo"><span id="nombreVP">Nombre</span></div>
+                        <div class="descripcion">
+                            <span id="descripcionVP">
+                        Làmpara de lata fabricada a mano por artezanos. Diferentes tamaños y motivos.
+                        Las lámparas son dispositivos que transforman una energía eléctrica o química en 
+                        energía lumínica. Desde un punto de vista más técnico, se istingue entre dos objetos: 
+                        la lámpara es el dispositivo que produce la luz, mientras que la luminaria es el
+                        aparato que le sirve de soporte.
+                        </span>
+                        </div>
+                    </div>
+                    <div class="row precioArticulo">
+                        <div class="antes">
+                            <div class="anterior">ANTES</div>
+                            <div class="moneda">$</div>
+                            <div class="monto" id="precioViejoVP">549</div>
+                        </div>
+                        <div class="descuento">
+                            <div class="monto inline" id="descuentoVP">20</div>
+                            <div class="porcentaje inline">%</div>
+                            <div class="off">OFF</div>
+                        </div>
+                        <div class="ahora">
+                            <div class="ahorita">AHORA</div>
+                            <div class="moneda inline b">$</div>
+                            <div class="monto inline b" id="precioVP">2000</div>
+                        </div>
+
+                        <button class="agregarAlCarrito red accent-4 btn inline" onclick="agregarAlCarrito()">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <!-- IZQUIERDA -->
                 <div class="col l2 m10 s12 offset-m1 columna-izquierda">
@@ -109,9 +170,7 @@
                 <div class="col l8 m10 s12 offset-m1 columna-central">
                     <div class="contenedor-sectores">
                         <div class="row contenedor-articulos">
-
-
-                            <div class="articulo col s12 m10 offset-m1 l3">
+                            <!-- <div class="articulo col s12 m10 offset-m1 l3">
                                 <div class="row arriba">
                                     <div class="izquierda col s4 m6 l5">
                                         <div class="antes">
@@ -138,11 +197,8 @@
                                 <div class="row abajo">
                                     <span>Lámpara</span>
                                 </div>
-                            </div>
-
-
+                            </div> -->
                         </div>
-
                     </div>
                 </div>
                 <!-- DERECHA -->
@@ -158,53 +214,27 @@
                                     </div>
                                 </div>
 
-                                <div class="row">
+                                <div class="row contenedor-carrito">
 
-
-                                    <div class="tarjeta">
+                                    <!-- <div class="tarjeta">
                                         <div class="arriba">
                                             <div class="imagen"></div>
                                         </div>
                                         <div class="abajo">
                                             <div class="renglonUp">
-                                                <span>Cama 2 plazas Aligato</span>
+                                                <div class="nombre">Cama 2 plazas Aligato</div>
                                             </div>
                                             <div class="renglonDown">
-                                                <span>$5000  2 Unid.  Total: $10.000</span>
+                                                <div class="monedaU inline">$</div>
+                                                <div class="montoU inline">0000</div>
+                                                <div class="cnatidad inline">0</div>
+                                                <div class="unidades inline">Unid.</div>
+                                                <div class="total inline">Total:</div>
+                                                <div class="monedaT inline">$</div>
+                                                <div class="montoT inline">10.000</div>
                                             </div>
                                         </div>
-                                    </div>
-
-
-                                    <div class="tarjeta">
-                                        <div class="arriba">
-                                            <div class="imagen"></div>
-                                        </div>
-                                        <div class="abajo">
-                                            <div class="renglonUp">
-                                                <span>Cama 2 plazas Aligato</span>
-                                            </div>
-                                            <div class="renglonDown">
-                                                <span>$5000  2 Unid.  Total: $10.000</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="tarjeta">
-                                        <div class="arriba">
-                                            <div class="imagen"></div>
-                                        </div>
-                                        <div class="abajo">
-                                            <div class="renglonUp">
-                                                <span>Cama 2 plazas Aligato</span>
-                                            </div>
-                                            <div class="renglonDown">
-                                                <span>$5000  2 Unid.  Total: $10.000</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div> -->
 
                                 </div>
                                 <div class="row">

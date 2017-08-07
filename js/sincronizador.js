@@ -33,6 +33,12 @@ var archivoTipos = urlArchivo + "tipos.csv";
 var productos = [];
 var tipos = [];
 var secciones = [];
+var carrito = [];
+
+var idProdVistaPrevia = 0;
+var vistaProductoActiva = true;
+
+
 
 var cargarProductos = function (lista) {
     for (var i = 0; i < lista.length; i++) {
@@ -65,6 +71,7 @@ var cargarTipos = function (lista) {
         }
     }
 }
+
 
 $(document).ready(function () {
     leer(archivoProductos, ",", cargarProductos);
@@ -137,7 +144,6 @@ function leer(urlArchivo, separador, funcion) {
     });
 }
 
-
 function cargarTablaProductos(lista) {
 
     var cont = 0;
@@ -177,7 +183,7 @@ function cargarTablaProductos(lista) {
                             <div class="moneda inline b">$</div>
                             <div class="monto inline b">`+ precio + `</div>
                         </div>
-                        <div class="vermas">Ver más</div>
+                        <div class="vermas" onclick="verProducto(`+ id + `)">Ver más</div>
                     </div>
                     <div class="derecha col s8 m6 l6">
                         <div class='imagen' style='background-image: url("`+ imagen + `");'></div>
@@ -195,15 +201,11 @@ function cargarTablaProductos(lista) {
             item = item + descuentoHtml;
         }
         item = item + parte2;
-
-
         articulos = articulos + item;
-
     }
     articulos = articulos
     $(".contenedor-articulos").append(articulos);
 }
-
 
 function cargarTablaMenu() {
     var menu = "";
@@ -222,3 +224,153 @@ function cargarTablaMenu() {
     }
     $(".sectorizado").append(menu);
 }
+
+function activarVistaProductos() {
+    if (vistaProductoActiva) {
+        vistaProductoActiva = false;
+        $(".vistaArticulo").addClass("activo");
+        $(".vistaArticulo").removeClass("inactivo");
+    } else {
+        vistaProductoActiva = true;
+        $(".vistaArticulo").addClass("inactivo");
+        $(".vistaArticulo").removeClass("activo");
+    }
+}
+
+function verProducto(idProducto) {
+    console.log(idProducto);
+    idProdVistaPrevia = idProducto;
+
+    var nombre;
+    var descripcion;
+    var precio;
+    var precioViejo;
+    var descuento;
+    var imagen;
+
+    for (var p = 0; p < productos.length; p++) {
+        var id = productos[p].id;
+        if (id == idProducto) {
+            nombre = productos[p].nombre;
+            descripcion = productos[p].descripcion;
+            precio = productos[p].precio;
+            precioViejo = productos[p].precioViejo;
+            descuento = productos[p].descuento;
+            imagen = productos[p].imagen;
+            console.log("***************************************");
+            console.log(nombre)
+            console.log(descripcion)
+            console.log(precio)
+            console.log(descuento)
+            console.log(imagen)
+            console.log("***************************************");
+
+            $("#nombreVP").html(nombre);
+            $("#descripcionVP").html(descripcion);
+            $("#precioViejoVP").html(precioViejo);
+            $("#descuentoVP").html(descuento);
+            $("#precioVP").html(precio);
+            $("#imagenVP").css('background-image', 'url("./img/productos/' + imagen + '")');
+
+            activarVistaProductos();
+        }
+    }
+}
+
+
+
+var Itm = function (key, cantidad) {
+    this.key = key;
+    this.cantidad = cantidad;
+}
+
+
+function agregarAlCarrito() {
+    var cantidad = 1;
+    var idProducto = idProdVistaPrevia;
+    var obj = new Itm(idProducto, cantidad);
+
+    if (existenciaProducto(idProducto)) {
+        console.log("Ya existe el prod en el carrito");
+        aumentarCantProducto(idProducto, 1);
+    } else {
+        carrito.push(obj);
+    }
+    console.log(carrito);
+    actualizarCarrito()
+}
+
+
+
+function actualizarCarrito() {
+    var lista = "";
+
+    for (var c = 0; c < carrito.length; c++) {
+        var id = carrito[c].key;
+        var cantidad = carrito[c].cantidad;
+        var nombre = consultarPropiedadProducto(id, "nombre");
+        var precio = consultarPropiedadProducto(id, "precio");
+        var imagen = consultarPropiedadProducto(id, "imagen");
+        var total = precio * cantidad;
+
+        var item = `
+            <div class="tarjeta">
+                <div class="arriba">
+                    <div class="imagen" style='background-image:url("./img/productos/` + imagen + `")'></div>
+                </div>
+                <div class="abajo">
+                    <div class="renglonUp">
+                        <div class="nombre">`+ nombre + `</div>
+                    </div>
+                    <div class="renglonDown">
+                        <div class="monedaU inline">$</div>
+                        <div class="montoU inline">`+ precio + `</div>
+                        <div class="cnatidad inline">`+ cantidad + `</div>
+                        <div class="unidades inline">Unid.</div>
+                        <div class="total inline">Total:</div>
+                        <div class="monedaT inline">$</div>
+                        <div class="montoT inline">`+ total + `</div>
+                     </div>
+                </div>
+            </div>
+        `
+        lista = lista + item;
+    }
+    $(".contenedor-carrito").html(lista);
+}
+
+
+
+
+
+
+function existenciaProducto(id) {
+    for (var p = 0; p < carrito.length; p++) {
+        var idProdCarrito = carrito[p].key;
+        if (id == idProdCarrito) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function aumentarCantProducto(id, valor) {
+    for (var p = 0; p < carrito.length; p++) {
+        var idProdCarrito = carrito[p].key;
+        if (id == idProdCarrito) {
+            var cant = carrito[p].cantidad;
+            carrito[p].cantidad = cant + valor;
+        }
+    }
+}
+
+function consultarPropiedadProducto(id, propiedad) {
+    for (var p = 0; p < productos.length; p++) {
+        idProd = productos[p].id;
+        if (idProd == id) {
+            var valor = productos[p][propiedad];
+            return valor;
+        }
+    }
+}
+
