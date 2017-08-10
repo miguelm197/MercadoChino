@@ -10,6 +10,12 @@
 .inactivo{
     display: none;
 }
+.invisible{
+    opacity: 0;
+}
+.visible{
+    opacity: 1;
+}
 .mobile{
     display: none;
 }

@@ -121,12 +121,8 @@
                         <div class="titulo"><span id="nombreVP">Nombre</span></div>
                         <div class="descripcion">
                             <span id="descripcionVP">
-                        Làmpara de lata fabricada a mano por artezanos. Diferentes tamaños y motivos.
-                        Las lámparas son dispositivos que transforman una energía eléctrica o química en 
-                        energía lumínica. Desde un punto de vista más técnico, se istingue entre dos objetos: 
-                        la lámpara es el dispositivo que produce la luz, mientras que la luminaria es el
-                        aparato que le sirve de soporte.
-                        </span>
+                                
+                            </span>
                         </div>
                     </div>
                     <div class="row precioArticulo">
@@ -147,6 +143,7 @@
                         </div>
 
                         <button class="agregarAlCarrito red accent-4 btn inline" onclick="agregarAlCarrito()">Agregar al carrito</button>
+                        <input type="number" class="numeric" id="cantidadArticulo" onchange="agregarCantidadProducto()">
                     </div>
                 </div>
             </div>
@@ -239,7 +236,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="total">
-                                        <span>Total $30.000</span>
+                                        <span id="totalCarrito"></span>
                                     </div>
                                 </div>
                             </div>

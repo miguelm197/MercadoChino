@@ -1,6 +1,9 @@
 .portada{
     height: 500px;
-    background: blue;
+    /*! background: blue; */
+    background-image: url("../img/Cocina.jpg");
+    background-size: cover;
+    background-position-Y:-400px;
 }
 
 
@@ -20,6 +23,7 @@
     font-size: 17px;
 }
 .contenedor-sectores .collapsible-body{
+    
     height: 50px;
     padding-top: 12.5px !important;
 }
@@ -27,6 +31,9 @@
     color: black;
     font-size: 15px;
     font-weight: 200;
+    width: 200px;
+    position: absolute;
+    cursor: pointer;
 }
 
 
@@ -47,6 +54,7 @@
 .carrito .tarjeta .arriba{
     height: 50%;
 }
+
 .carrito .tarjeta .arriba .imagen{
     height: 100%;
     background-image: url("../img/Dormitorio3.jpg");
@@ -58,6 +66,13 @@
 }
 .carrito .tarjeta .abajo .renglonUp{
     margin: 3px;
+}
+.carrito .tarjeta .abajo .renglonUp a{
+    position: absolute;
+    margin: -30px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    right: 0px;
 }
 .carrito .tarjeta .abajo .renglonDown{}
 
@@ -138,7 +153,7 @@
     margin-left: -3px;
 }
 .articulo .arriba .izquierda .descuento{
-    background-color: #e74444;
+    background-color: #e41f1f;
     width: 45px;
     padding-left: 10px;
     padding-bottom: 5px;
@@ -165,7 +180,7 @@
 }
 .articulo .arriba .izquierda .ahora .b{
     font-size: 1.6em;
-    color: #e74444;
+    color: #e41f1f;
     font-family: 'Century Gothic', sans-serif;
     font-weight: 400;
 }
@@ -174,6 +189,7 @@
     font-weight: 700;
 }
 .articulo .arriba .izquierda  .vermas{
+    margin-top: 30px;
     font-size: .7em;
     width: 60px;
     text-align: center;
@@ -189,6 +205,17 @@
     z-index: 1;
 }
 
+.articulo .arriba .izquierda  .agrAlCarrito{
+    margin-top: 10px;
+    font-size: .7em;
+    text-align: center;
+    font-weight: 700;
+    background-color: #e41f1f;
+    border-radius: 4px;
+    left: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
 
 
 
@@ -316,7 +343,12 @@
     right: 200px;
     bottom: 50px;
 }
-
+#cantidadArticulo{
+    width: 80px;
+    float: right;
+    margin-right: 220px;
+    margin-bottom: 15px;
+}
 
 
 
