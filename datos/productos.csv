@@ -29,3 +29,19 @@ id,nombre,descripcion,precio,precioViejo,descuento,imagen,activo
 28,Puerta doble corrediza de vidrio,"Puerta gigante, de vidrio, corrediza y doble. De las puertas más caras que tenemos. Muy buena calidad.",21000,24000,23,puerta3.jpg,true
 29,Puerta doble corrediza de Madera,"Puerta mediana, de madera, corrediza y doble. De las mas normalitas que tenemos. Buena calidad.",10000,12000,15,puerta4.jpg,true
 30,Puerta de madera con ventanillas,"Puerta de madera con ventanitas difuminadoras, y gruesa. Perfecta para el baño.",6000,7000,20,puerta5.jpg,true
+31,Mesa para comer de Madera,"Mesa para comer, masisa, con armazón de hierro. Más fuerte que patada de transformer.",9000,10000,20,mesa1.jpg,true
+32,Mesa ratona,"Mesa de roble para el living, perfecta para apoyar cosas",4000,5000,10,mesa2.jpg,true
+33,Mesa de roble,"Mesa de roble para el living, de color marrón oscuro. Muy buena calidad.",7000,8000,12,mesa3.jpg,true
+34,Mesa de madera trucha,"Mesa con madera trucha, muy minimalista pero no la uses mucho.",4000,5000,10,mesa4.jpg,true
+35,Mesa gigante,"Mesa para comedor, gigante. De roble, muy buena calidad. Color marrón.",12000,15000,25,mesa5.jpg,true
+36,Silla de morondanga,"Silla de madera forrada de tela, color blanca. Buena calidad y muy cómoda",3000,4000,13,silla1.jpg,true
+37,Silla aterciopelada,"Sillas super cómodas, chinas. Madera de roble, con tela aterciopelada.",9000,12000,10,silla2.jpg,true
+38,Silla modernas,"Sillas modernas, de acero. Con polifón, de color naranjas. Bastante cómodas. Made in china.",3000,4000,25,silla3.jpg,true
+39,Silla de madera,"Sillas comúnes de madera, de color blanco, para el comedor. Cómodas.",2000,3000,10,silla5.jpg,true
+40,Cortina muy cara,"Cortina de seda, blanco y bordó. Muy buena calidad. Directamente de china.",50000,70000,0,cortina1.png,true
+41,Cortina de láminas,"Cortina berreta, pero prolija.",7000,8000,24,cortina2.jpg,true
+42,Mesada moderna,"Mesada moderna en color blanco, madera MDF y marmol. Perfecta para cocinar arriba.",41000,52000,10,mesada1.jpg,true
+43,Mesada moderna de madera,"Mesada moderna de madera posta, no de mentira como la de MDF. Color marrón claro, o sea, madera. Mesada completa con marmol.",50000,62000,20,mesada2.jpg,true
+44,Mesada de madera caquita,"Mesada completa, media rústica, muy bonita y de calidad.",40000,41000,10,mesada3.jpg,true
+45,Mesada blanca de roble,"Mesada completa de madera de roble, de color blanco. Muy buena calidad. Made in china, ya sabes pariente.",80000,90000,20,mesada4.jpg,true
+46,Mesada de mentira,"Mesada china de plástico. Lema: mirame pero no me patees, que me rompo.",12000,16000,20,mesada5.jpg,true
