@@ -347,21 +347,3 @@ function registrarUsuario() {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
