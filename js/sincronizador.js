@@ -119,6 +119,8 @@ $(document).ready(function () {
         cargarTablaProductos(productos)
         cargarTablaMenu();
     }, 1000);
+
+    $(".contenedorArticulo").css("margin-top", ventana.alto);
 });
 
 
@@ -147,7 +149,7 @@ function cargarTablaProductos(lista) {
         }
 
         var item = `
-        <div class="articulo col s12 m8 offset-m2 l3">
+        <div class="articulo col s12 l3">
             <div class="row arriba">
                 <div class="izquierda col s4 m6 l6">
                     <div class="antes">
@@ -208,10 +210,15 @@ function activarVistaProductos() {
         vistaProductoActiva = false;
         $(".vistaArticulo").addClass("activo");
         $(".vistaArticulo").removeClass("inactivo");
+        $(".contenedorArticulo").animate({ marginTop: "0px" }, 200);
+        $(".fondoArticulo").animate({ opacity: "0.8" }, 1000);
     } else {
         vistaProductoActiva = true;
-        $(".vistaArticulo").addClass("inactivo");
-        $(".vistaArticulo").removeClass("activo");
+        $(".fondoArticulo").animate({ opacity: "0" }, 1000);        
+        $(".contenedorArticulo").animate({ marginTop: ventana.alto }, 200, function () {
+            $(".vistaArticulo").addClass("inactivo");
+            $(".vistaArticulo").removeClass("activo");
+        });
     }
 
     if (contVistas == 0) {

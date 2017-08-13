@@ -143,15 +143,15 @@
     .contenedor-sectores .collapsible-header{
        height: 75px;
        padding-top: 17px;
-       font-size: 25px;
+       font-size: 35px;
     }
     .contenedor-sectores .collapsible-body{
         height: 70px;
-       font-size: 25px !important;
+       font-size: 30px !important;
        padding-top: 15px !important;
     }
     .contenedor-sectores .collapsible-body a{
-       font-size: 25px !important;
+       font-size: 35px !important;
            
     }
     
@@ -251,20 +251,73 @@
         font-size: 3em;
     }
 
+    .desplegarVista{
+        right: 60px;
+        bottom: 200px;    
+    }
+    .btnVista{
+        width: 80px !important;
+        height: 80px !important;
+        padding-top: 20px !important; 
+    }
+    
+    
+    /*GONDOLA*/
+    .articulo  .arriba{
+        height: 500px;
+    }
+    .articulo .arriba .izquierda .antes{
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .articulo .arriba .izquierda .antes div{
+        font-size: 1.5em;
+    }
+    .articulo .arriba .izquierda .antes .monto{
+        margin-left: -3px;
+    }
+    .articulo .arriba .izquierda .descuento{
+        background-color: #e41f1f;
+        width: 95px;
+        padding-left: 15px;
+        margin-left: 165px;
+        margin-top: -10px;
+    }
+    .articulo .arriba .izquierda .descuento div{
+        font-size: 2em;
+    }
+    .articulo .arriba .izquierda .ahora{
+        margin-top: 0px;
+    }
+    .articulo .arriba .izquierda .ahora .ahorita{
+        font-size: 1.8em;
+    }
+    .articulo .arriba .izquierda .ahora .b{
+        font-size: 3em;
+    }
+    .articulo .arriba .izquierda .ahora .moneda{
+        font-size: 2em;
+    }
+    .articulo .arriba .izquierda  .vermas{
+        margin-top: 100px;
+        font-size: 1.5em;
+        width: 100%;
+        padding: 2px 2px;
+    }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    .articulo .arriba .izquierda  .agrAlCarrito{
+        width: 100%;
+        height: 50px;
+        padding-top: 7px;
+        font-size: 1.5em;
+    }
+
+
+    .articulo .abajo{
+        font-size: 2em;
+    }
+
+
     
     
     

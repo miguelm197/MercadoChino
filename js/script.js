@@ -118,7 +118,7 @@ $(document).ready(function () {
     leer(archivoUsuarios, ";", cargarUsuarios);
 
 
-        $('.materialboxed').materialbox();
+    $('.materialboxed').materialbox();
 
 });
 
@@ -229,19 +229,29 @@ function calcularAparienciaNav() {
 }
 
 function ocultarModalLogin() {
-    $(".modalLogin").addClass("inactivo");
+    $(".contenedorLogin").animate({ top: "-100%" }, 500, function () {
+        $(".fondoLogin").animate({ opacity: "0" }, 500, function () {
+            $(".contenedorLogin").animate({ top: "150%" });
+            $(".modalLogin").addClass("inactivo");
+        });
+    });
 }
 function abrirIniciarLogin() {
     $(".modalLogin").removeClass("inactivo");
     $(".iniciar").removeClass("inactivo");
-
     $(".registrar").addClass("inactivo");
+
+    $(".fondoLogin").animate({ opacity: "0.8" }, 1000);
+    $(".contenedorLogin").animate({ top: "50%" }, 500);
+
 }
 function abrirRegistrarLogin() {
     $(".modalLogin").removeClass("inactivo");
     $(".iniciar").addClass("inactivo");
-
     $(".registrar").removeClass("inactivo");
+
+    $(".fondoLogin").animate({ opacity: "0.8" }, 1000);
+    $(".contenedorLogin").animate({ top: "50%" }, 500);
 }
 
 

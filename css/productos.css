@@ -119,11 +119,12 @@
 }
 .articulo .abajo{
     padding: 5px;
+    padding-left: 15px;
     height: 70px;
     background-color: #e0e0e0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: .9em;
+    font-size: 1.2em;
 }
 .articulo .arriba .derecha{
     height: 100%;
@@ -255,6 +256,7 @@
     z-index: 6;
     padding: 0px 200px;
     padding-top: 65px;
+    margin-top:3000px;
 }
 
 .contenedorArticulo .portadaArticulo{
@@ -275,7 +277,6 @@
     background-position-y: 50%;
     background-size: cover; */
     overflow: hidden;
-    background-color: blue;
 }
 .contenedorArticulo .portadaArticulo .imagen .imgVP{   
     margin-top: -20%;
