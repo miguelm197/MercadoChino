@@ -1,0 +1,77 @@
+<div class="navbar-fixed">
+
+    <nav class="nav navPrincipalSinShad">
+        <div class="nav-wrapper navPrincipal">
+            <!-- Logo de la barra de arriba -->
+            <a href="#" class="brand-logo center">
+                <p class="mercadochino">
+                    <part class="mc1">Mercado</part>
+                    <part class="mc2">Chino</part>
+                    <part class="mc3">.Uy</part>
+                </p>
+            </a>
+
+            <!-- Links de la barra de arriba -->
+            <ul id="nav-mobile" class="right hide-on-med-and-down menuArriba navPrincipalMenu login ">
+                <li><a onclick="abrirIniciarLogin()">Iniciar Sesión</a></li>
+                <li><a onclick="abrirRegistrarLogin()">Regístrate</a></li>
+            </ul>
+             <ul id="nav-mobile" class="right hide-on-med-and-down menuArriba navPrincipalMenu usuario inactivo">
+                <li><a id="usurioVentana">MiguelMerelli</a></li>
+                <li><a onclick="cerrarSesionLogin()">Salir</a></li>
+                
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down menuArriba navPrincipalMenu">
+                <li><a onclick="irInicio()">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a onclick="irNosotros()">Nosotros</a></li>
+                <li><a onclick="irContacto()">Contacto</a></li>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
+        </div>
+
+        <!-- Menu desplegable del costado -->
+        <ul id="slide-out" class="side-nav">
+            <li>
+                <div class="background">
+                    <p class="mercadochino">
+                        <part class="mc1">Mercado</part>
+                        <part class="mc2">Chino</part>
+                        <part class="mc3">.Uy</part>
+                    </p>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="divider"></div>
+            </li>
+
+            <li><a onclick="irInicio()"><span class="">Inicio</span></a></li>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+
+            <li><a href="productos.html"><span class="">Productos</span></a></li>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+
+            <li><a onclick="irNosotros()"><span class="">Nosotros</span></a></li>
+
+            <li>
+                <div class="divider"></div>
+            </li>
+
+            <li><a onclick="irContacto()"><span class="">Contacto</span></a></li>
+
+
+
+            <li>
+                <div class="divider"></div>
+            </li>
+        </ul>
+    </nav>
+</div>

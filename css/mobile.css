@@ -134,4 +134,140 @@
         transform: translateY(0px) !important;
         left: 0px;
     }
+    
+    
+    
+    
+    
+    /*MENU DESPLEGABLE*/
+    .contenedor-sectores .collapsible-header{
+       height: 75px;
+       padding-top: 17px;
+       font-size: 25px;
+    }
+    .contenedor-sectores .collapsible-body{
+        height: 70px;
+       font-size: 25px !important;
+       padding-top: 15px !important;
+    }
+    .contenedor-sectores .collapsible-body a{
+       font-size: 25px !important;
+           
+    }
+    
+    
+    
+    
+    /*CARRITO*/
+    .carrito .tarjeta{
+       height: 450px;
+       font-size: 30px;
+    }
+    .carrito .total{
+        font-size: 40px;
+    }
+    .carrito .eliminar{
+        font-size: 25px !important;
+    }
+   .articulo .imagen{
+        background-position-x: 0px !important;
+    }
+    
+    
+    
+    /*PORTADA*/
+    
+    .portada{
+        background-position-y: 0px;
+    }
+    
+    
+    
+    
+    /*VISTA DE ARTICULOS*/
+    .contenedorArticulo{
+        position: fixed ;
+        top: 20%;
+        height: 100%;
+        padding: 0px 0px;
+        padding-top: 0px;
+    }
+    
+    
+    
+    .contenedorArticulo .descripcionArticulo .titulo span{
+        font-size: 50px;
+    }
+    .contenedorArticulo .descripcionArticulo .descripcion span{
+        font-size: 30px;
+    }
+    .contenedorArticulo .precioArticulo{
+        margin-top: 170px;
+    }
+    .contenedorArticulo .precioArticulo .antes div{
+        font-size: 2em;
+    }
+    .contenedorArticulo .precioArticulo .antes .monto{
+        margin-left: -3px;
+    }
+    .contenedorArticulo .precioArticulo .descuento{
+        position: absolute;
+        width: 138px;
+        padding-left: 30px;
+        margin-left: 350px;
+        margin-top: -20px;
+    }
+    .contenedorArticulo .precioArticulo .descuento div{
+        font-size: 2.5em;
+    }
+    .contenedorArticulo .precioArticulo  .ahora{
+        margin-top: 0px;
+    }
+    .contenedorArticulo .precioArticulo  .ahora .ahorita{
+        font-size: 2.5em;
+    }
+    .contenedorArticulo .precioArticulo  .ahora .b{
+        font-size: 5em;
+     }
+    .contenedorArticulo .precioArticulo  .ahora .moneda{
+        font-size: 3em;
+    }
+    
+    .agregarAlCarrito{
+        position: fixed;
+        width: 100%;
+        height: 80px !important;
+        left: 0px;
+        bottom: 0px;
+        font-size: 2em !important;
+        
+    }
+    #cantidadArticulo{
+        position: fixed;
+        width: 60% !important;
+        height: 80px;
+        float: right;
+        left: 20% !important;
+        font-size: 3em;
+    }
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

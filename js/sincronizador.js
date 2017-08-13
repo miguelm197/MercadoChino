@@ -35,6 +35,7 @@ var archivoTipos = urlArchivo + "tipos.csv";
 var archivoRelaciones = urlArchivo + "relaciones.csv";
 
 
+
 var productos = [];
 var tipos = [];
 var secciones = [];
@@ -43,7 +44,7 @@ var relaciones = [];
 
 var idProdVistaPrevia = 0;
 var vistaProductoActiva = true;
-
+var contVistas = 0;
 
 
 var cargarProductos = function (lista) {
@@ -98,6 +99,15 @@ var cargarRelaciones = function (lista) {
 }
 
 
+// ===========================================================
+// AGREGAR USUARIOS
+// ALTAS 
+// LINQUEAR ENLACES DE LOS MENUES
+// ACOMODAR VISTA PREVIA
+// ===========================================================
+
+
+
 
 $(document).ready(function () {
     leer(archivoProductos, ",", cargarProductos);
@@ -108,68 +118,11 @@ $(document).ready(function () {
     setTimeout(function cargarTipo() {
         cargarTablaProductos(productos)
         cargarTablaMenu();
-    }, 1000)
+    }, 1000);
 });
 
 
 
-function leer(urlArchivo, separador, funcion) {
-    $.ajax({
-        url: urlArchivo,
-        dataType: "text",
-        success: function (hola) {
-            var filas = hola.split("\r\n");
-            var coleccion = [];
-            var cabezal = [];
-
-            for (var i = 1; i < filas.length; i++) {
-                var datos = filas[i].split(separador);
-                var valor = "";
-                var hayComillas = false;
-                var valores = [];
-
-                for (var d = 0; d < datos.length; d++) {
-                    var texto = datos[d];
-                    var comillas = texto.indexOf('"');
-
-                    if (comillas != -1) {
-                        valor = valor + texto;
-
-                        if (hayComillas) {
-                            hayComillas = false;
-                        } else {
-                            hayComillas = true;
-                        }
-
-                    } else {
-
-                        if (hayComillas) {
-                            valor = valor + separador + texto + separador;
-                        } else {
-                            valor = texto;
-                        }
-                    }
-                    if (!hayComillas) {
-                        valores.push(valor);
-                        valor = "";
-                    }
-                }
-                var cabezal = filas[0];
-                var cab = cabezal.split(separador);
-                var objprueba = new Object();
-
-                for (var u = 0; u < cab.length; u++) {
-                    var llave = cab[u];
-                    var valor = valores[u];
-                    objprueba[llave] = valor;
-                }
-
-                coleccion.push(objprueba);
-            }
-            funcion(coleccion);
-        }
-    });
-}
 
 function cargarTablaProductos(lista) {
 
@@ -194,7 +147,7 @@ function cargarTablaProductos(lista) {
         }
 
         var item = `
-        <div class="articulo col s12 m10 offset-m1 l3">
+        <div class="articulo col s12 m8 offset-m2 l3">
             <div class="row arriba">
                 <div class="izquierda col s4 m6 l6">
                     <div class="antes">
@@ -236,7 +189,7 @@ function cargarTablaMenu() {
     for (var s = 0; s < secciones.length; s++) {
         var seccionT = secciones[s].seccion;
         var sector = secciones[s].id;
-        menu = menu + `<li>\n<div class="collapsible-header" onclick="consultarPorSeccion(` + sector + `)">` + seccionT + `</div>\n`
+        menu = menu + `<li>\n<div class="collapsible-header">` + seccionT + `</div>\n`
         for (var t = 0; t < tipos.length; t++) {
             var seccion = tipos[t].seccion.id;
             if (seccion == sector) {
@@ -260,10 +213,15 @@ function activarVistaProductos() {
         $(".vistaArticulo").addClass("inactivo");
         $(".vistaArticulo").removeClass("activo");
     }
+
+    if (contVistas == 0) {
+        $('.tap-target').tapTarget('open');
+        contVistas++;
+    }
 }
 
 function verProducto(idProducto) {
-    console.log(idProducto);
+
     idProdVistaPrevia = idProducto;
 
     var nombre;
@@ -300,9 +258,9 @@ function verProducto(idProducto) {
             $("#descuentoVP").html(descuento);
             $("#precioVP").html(precio);
             $("#cantidadArticulo").val(cantidad);
-            $("#imagenVP").css('background-image', 'url("./img/productos/' + imagen + '")');
-
+            $("#imagenVP").attr('src', 'img/productos/' + imagen);
             activarVistaProductos();
+
         }
     }
 }

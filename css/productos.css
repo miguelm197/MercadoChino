@@ -23,8 +23,7 @@
     font-size: 17px;
 }
 .contenedor-sectores .collapsible-body{
-    
-    height: 50px;
+        height: 50px;
     padding-top: 12.5px !important;
 }
 .contenedor-sectores .collapsible-body a{
@@ -85,6 +84,19 @@
 .carrito .tarjeta .abajo .renglonDown .montoT{margin-left: -3px;}
 
 
+.carrito .finalizarCompra button{
+    width: 100%;
+    border: none;
+    border-top: 1px solid silver;
+    background-color: transparent;
+    transition: all 1s;
+    padding: 10px;
+}
+
+.carrito .finalizarCompra button:hover{
+    background-color: #f6f6f6;
+    transition: all 1s;
+}
 
 
 
@@ -227,19 +239,19 @@
     z-index: 5;
 }
 .fondoArticulo{
-    position: absolute;
+    position: fixed;
     background-color: black;
-    height: 150%;
+    height: 100%;
     width: 100%;
     top: 0px;
     z-index: 5;
     opacity: .8;
 }
 .contenedorArticulo{
-    position: absolute;
+    position: fixed;
     background-color: white;
     width: 100%;
-    top: 0px;
+    top: 70px;
     z-index: 6;
     padding: 0px 200px;
     padding-top: 65px;
@@ -259,9 +271,14 @@
 .contenedorArticulo .portadaArticulo .imagen{
     width: 100%;
     height: 100%;
-    background-image: url("../img/productos/Cama.jpg");
+    /*background-image: url("../img/productos/Cama.jpg");
     background-position-y: 50%;
-    background-size: cover;
+    background-size: cover; */
+    overflow: hidden;
+    background-color: blue;
+}
+.contenedorArticulo .portadaArticulo .imagen .imgVP{   
+    margin-top: -20%;
 }
 .contenedorArticulo .descripcionArticulo .titulo span{
     font-size: 30px;
@@ -339,15 +356,17 @@
     color: white;
 }
 .agregarAlCarrito{
+    width: 300px;
     position: absolute;
     right: 200px;
     bottom: 50px;
 }
 #cantidadArticulo{
-    width: 80px;
-    float: right;
-    margin-right: 220px;
-    margin-bottom: 15px;
+    font-size: 2em;
+    width: 300px !important;
+    position: absolute;
+    right: 200px;
+    bottom: 100px;
 }
 
 

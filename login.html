@@ -1,0 +1,97 @@
+<div class="fondoLogin" onclick="ocultarModalLogin()">
+</div>
+
+<div class="contenedorLogin">
+    <div class="container">
+        <div class="row">
+            <div class="col m6 offset-m3">
+
+                <div class="iniciar inactivo">
+                    <h4>IniciarSesión</h4>
+
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="inicioUsuario" type="email" class="validate" required>
+                                <label for="inicioUsuario">Email</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="inicioClave" type="password" class="validate">
+                                <label for="inicioClave">Password</label>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button type="submit" name="action" class="btn-floating btn-large waves-effect waves-light red btn-entrar" onclick="iniciarSesionU()">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </button>
+
+                            <div class="enlaces">
+                                <a class="inline" onclick="abrirRegistrarLogin()">Registrate</a>
+                                <a class="inline" onclick="ocultarModalLogin()">Cancelar</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="registrar">
+                    <h4>Registrarse</h4>
+
+                    <form class="col s12 margin-top">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Placeholder" id="registrarNombre" type="text" class="validate">
+                                <label for="registrarNombre">Nombre</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="registrarCorreo" type="email" class="validate">
+                                <label for="registrarCorreo">Correo</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="registrarClaveUno" type="password" class="validate">
+                                <label for="registrarClaveUno">Contraseña</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="registrarClaveDos" type="password" class="validate">
+                                <label for="registrarClaveDos">Cnfirmar contraseña</label>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button type="submit" name="action" class="btn-floating btn-large waves-effect waves-light red btn-entrar" onclick="registrarUsuario()">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </button>
+
+                            <div class="enlaces">
+                                <a class="inline" onclick="abrirIniciarLogin()">Iniciar Sesión</a>
+                                <a class="inline" onclick="ocultarModalLogin()">Cancelar</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

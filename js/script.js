@@ -5,17 +5,106 @@ var ventana = {
     ancho: 0,
     mobile: true,
     anchoMobile: 1000,
-    posicion: 0
+    posicion: 0,
+    usuario: null
 }
 
+function Usuario(id, nombre, clave, correo) {
+    this.id = id;
+    this.nombre = nombre;
+    this.clave = clave;
+    this.correo = correo;
+}
+var urlArchivo = "./datos/";
+var archivoUsuarios = urlArchivo + "usuarios.csv";
+
+var usuarios = [];
+
+
+var cargarUsuarios = function (lista) {
+    for (var i = 0; i < lista.length; i++) {
+        var valores = Object.values(lista[i]);
+        var usr = new Usuario(...valores);
+        usuarios.push(usr);
+    }
+}
+
+function leer(urlArchivo, separador, funcion) {
+    $.ajax({
+        url: urlArchivo,
+        dataType: "text",
+        success: function (hola) {
+            var filas = hola.split("\r\n");
+            var coleccion = [];
+            var cabezal = [];
+
+            for (var i = 1; i < filas.length; i++) {
+                var datos = filas[i].split(separador);
+                var valor = "";
+                var hayComillas = false;
+                var valores = [];
+
+                for (var d = 0; d < datos.length; d++) {
+                    var texto = datos[d];
+                    var comillas = texto.indexOf('"');
+
+                    if (comillas != -1) {
+                        valor = valor + texto;
+
+                        if (hayComillas) {
+                            hayComillas = false;
+                        } else {
+                            hayComillas = true;
+                        }
+
+                    } else {
+
+                        if (hayComillas) {
+                            valor = valor + separador + texto + separador;
+                        } else {
+                            valor = texto;
+                        }
+                    }
+                    if (!hayComillas) {
+                        valores.push(valor);
+                        valor = "";
+                    }
+                }
+                var cabezal = filas[0];
+                var cab = cabezal.split(separador);
+                var objprueba = new Object();
+
+                for (var u = 0; u < cab.length; u++) {
+                    var llave = cab[u];
+                    var valor = valores[u];
+                    objprueba[llave] = valor;
+                }
+
+                coleccion.push(objprueba);
+            }
+            funcion(coleccion);
+        }
+    });
+}
 
 
 $(document).ready(function () {
 
-    $(".button-collapse").sideNav();
+    $("header").load("./navbar.html");
+    $(".modalLogin").load("./login.html");
+
+    setTimeout(function cargarTipo() {
+        $(".button-collapse").sideNav();
+    }, 1000)
+
+
     $('.parallax').parallax();
     $('.carousel.carousel-slider').carousel({ fullWidth: true });
     ventana.posicion = $(window).scrollTop();
+
+    $(document).ready(function () {
+        $('.tooltipped').tooltip({ delay: 50 });
+    });
 
     dimensiones();
     mobileDetect();
@@ -25,6 +114,12 @@ $(document).ready(function () {
     $("html, body").animate({
         scrollTop: 1
     }, 1);
+
+    leer(archivoUsuarios, ";", cargarUsuarios);
+
+
+        $('.materialboxed').materialbox();
+
 });
 
 
@@ -131,5 +226,132 @@ function calcularAparienciaNav() {
         $(".menuArriba").removeClass("navPrincipalMenu");
 
     }
+}
+
+function ocultarModalLogin() {
+    $(".modalLogin").addClass("inactivo");
+}
+function abrirIniciarLogin() {
+    $(".modalLogin").removeClass("inactivo");
+    $(".iniciar").removeClass("inactivo");
+
+    $(".registrar").addClass("inactivo");
+}
+function abrirRegistrarLogin() {
+    $(".modalLogin").removeClass("inactivo");
+    $(".iniciar").addClass("inactivo");
+
+    $(".registrar").removeClass("inactivo");
+}
+
+
+function iniciarSesionU() {
+    var correo = $("#inicioUsuario").val();
+    var clave = $("#inicioClave").val();
+    iniciarSesion(correo, clave);
+}
+
+function iniciarSesion(correo, clave) {
+    if (correo != "") {
+
+
+
+        if (existenciaUsuario(correo)) {
+            if (validarClaveUsuario(correo, clave)) {
+                var usuario = obtenerUsuario(correo);
+                ventana.usuario = usuario;
+                $(".login").addClass("inactivo");
+                $(".usuario").removeClass("inactivo");
+                $("#usurioVentana").text(ventana.usuario.nombre);
+                ocultarModalLogin();
+                Materialize.Toast.removeAll();
+            } else {
+                Materialize.toast('Correo o clave incorrecta', 4000);
+            }
+        } else {
+            Materialize.toast('El correo no está registrado', 4000);
+        }
+    } else {
+        Materialize.toast('No ha ingresado un correo', 4000);
+    }
+}
+
+function validarClaveUsuario(correo, clave) {
+    for (var u = 0; u < usuarios.length; u++) {
+        var correoU = usuarios[u].correo;
+        var claveU = usuarios[u].clave;
+
+        if ((correoU == correo) && (claveU == clave)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function existenciaUsuario(correo) {
+    for (var u = 0; u < usuarios.length; u++) {
+        var correoU = usuarios[u].correo;
+        if (correoU == correo) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function obtenerUsuario(correo) {
+    for (var u = 0; u < usuarios.length; u++) {
+        var correoU = usuarios[u].correo;
+        if (correoU == correo) {
+            return usuarios[u];
+        }
+    }
+}
+
+function cerrarSesionLogin() {
+    ventana.usuario = null;
+    $(".login").removeClass("inactivo");
+    $(".usuario").addClass("inactivo");
+}
+
+
+function registrarUsuario() {
+    var nombre = $("#registrarNombre").val();
+    var correo = $("#registrarCorreo").val();
+    var claveUno = $("#registrarClaveUno").val();
+    var claveDos = $("#registrarClaveDos").val();
+
+    if (!existenciaUsuario(correo)) {
+        if (claveUno == claveDos) {
+            var id = usuarios.length;
+            var clave = claveUno;
+
+            var usr = new Usuario(id, nombre, clave, correo);
+            usuarios.push(usr);
+
+            iniciarSesion(correo, clave);
+        } else {
+            alert("Las contraseñas no son iguales");
+        }
+    } else {
+        alert("El correo ya está registrado");
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,31 @@
 id,nombre,descripcion,precio,precioViejo,descuento,imagen,activo
-1,Cama de 2 plazas,"Cama c�moda para dormir, y so�ar con los angelitos, Hecho con madera china de m�xima calidad",15000,20000,20,cama.jpg,true
-2,Cortinas para ventana,Cortinas de diferentes colores para decorar. M�xima calidad con telas chinas.,8000,12000,0,cortinas.jpg,true
-3,Mesa ratona,"Para comer, apoyar cosas o dejarla vac�a. Perfecta para ver y acariciar.",5000,6000,30,mesa.jpg,true
-4,Puerta de madera,Puerta para poder pasar de una habitaci�n a otra. Madera de alta calidad.,9000,10000,50,puerta.jpg,true
-5,Silla de pl�stico,"Silla bonita para sentarse con comodidad. Elegante, perfecta para habitaci�nes modernas.",4000,6000,25,silla.jpg,true
+1,Cama de 2 plazas,"Cama cómoda para dormir, y soñar con los angelitos, Hecho con madera china de máxima calidad",15000,20000,20,cama.jpg,true
+2,Cortinas para ventana,Cortinas de diferentes colores para decorar. Máxima calidad con telas chinas.,8000,12000,0,cortinas.jpg,true
+3,Mesa ratona,"Para comer, apoyar cosas o dejarla vacía. Perfecta para ver y acariciar.",5000,6000,30,mesa.jpg,true
+4,Puerta de madera,Puerta para poder pasar de una habitación a otra. Madera de alta calidad.,9000,10000,50,puerta.jpg,true
+5,Silla de plástico,"Silla bonita para sentarse con comodidad. Elegante, perfecta para habitaciones modernas.",4000,6000,25,silla.jpg,true
+6,Cama de Roble,"Cama moderna de 2 plazas, madera de roble para una mejor calidad, no se olvide de que la calidad china es la mejor ;)",20000,25000,20,camaRoble.jpg,true
+7,Cama Flotante,"Cama moderna flotante, para dormir y sentir que estás en el cielo",18000,20000,10,camaFlotante.jpg,true
+8,Cama de 1 plaza,"Cama de una plaza, madera berreta, bordeado de metal para que no se desarme sola",12000,15000,0,camaUnaPlaza.jpg,true
+9,Placard Blanco,"Placard de MDF blanco, elegante, comodo, alta calidad y bajo precio. Perfecto para los chinos xD.",18000,20000,18,placardBlanco.jpg,true
+10,Super Placard,"Placard de Roble, hecho a medida. Usted nos da las medidas, nosotros te lo fabricamos. Terminación elegante y delicada. NOTA: el precio puede variar dependiendo las dimenciones",69000,700000,18,superPlacar.jpg,true
+11,Placard de MDF,"Placard de MDF color caca, elegante, cómodo, alta calidad y bajo precio. Perfecto par alos chinos xD",20000,15000,0,placar3.jpg,true
+12,Placard de MDF con espejos,"Placard de MDF color blanco, con espejos en las puertas, elegante, cómodo, alta calidad y bajo precio. Perfecto par alos chinos xD",25000,15500,10,placar4.jpg,true
+13,Portatil común,"Portatil con una lámparita dentro. Pantalla de tela, asi que es probable que se prenda fuego algún día.",2000,3500,0,lampara1.jpg,true
+14,Candelabro viejaso,"Candelabro de vidrio marca MIRAME Y NO ME TOQUES QUE ME ROMPO. Y es verdad, si lo tocás se rompe. Desde MercadoChino sugerimos no tocar el candelabro.",70500,906000,30,lampara2.jpg,true
+15,Lámparas de alambre,"Lámparas de techo hechas con alambre, tremanda luz dan.",2000,3500,10,lampara3.jpg,true
+16,Alfombra de Sisal,"Alfombra de Sisal muy linda. Cara como Lambo de oro, pero muy linda.",40000,60000,20,alfombra1.jpg,true
+17,Alfombra de lana,"A cuadraditos de colores, linda alfombra de lana. Calidad china",2000,3000,40,alfombra3.jpg,true
+18,Alfombra de 2 colores,"Alfombra de lana de dos colores muy bonitos, Violeta y Negro. Sin descriminación eh.",3000,4000,20,alfombra2.jpg,true
+19,Alfombra común,"Alfombra común para pisar,pero solo descalso.",5000,6000,10,alfombra4.jpg,true
+20,Rack común negro,"Rack para TV de color negro, madera MDF. Brilla mucho, sugerimos no pasar mucho Blem porque va a terminar hecho un espejo",5000,6000,10,rack1.jpg,true
+21,Rack común marrón,"Rack para TV de color marron, madera MDF. Es más opaco que un agujero negro, sugerimos pasarle Blem para que brille un poquito.",6000,6500,20,rack2.jpeg,true
+22,Rack de Roble,"Rack de buena calidad, madera de roble, color marrón. Muy elegante, pero solo para televisores medianos.",6000,7000,30,rack3.jpg,true
+23,Rack de Roble x2,"Rack de buena calidad, madera de roble, color marrón. El diseño es medio antiguo, lo que lo hace más caro.",9000,10000,12,rack4.jpg,true
+24,Rack flotante,"Rack hecho de Pallets, flotante, moderno, y aguanta los kilos wachin.",10000,12000,20,rack5.jpg,true
+25,Rack raro,"Rack rarito, ondulado, madera MDF, color marron. Diseño modernos para casas modernas.",8000,9000,20,rack6.jpg,true
+26,Puerta blanca de Madera,"Puerta de madera de color blanca, para interior. Perfecta para abrir y pasar por debajo.",4000,5000,10,puerta1.jpg,true
+27,Puerta de Madera moderna,"Una puerta de morondanga, moderna, un autentico -no me abras que me desgasto-",3000,3500,50,puerta2.jpg,true
+28,Puerta doble corrediza de vidrio,"Puerta gigante, de vidrio, corrediza y doble. De las puertas más caras que tenemos. Muy buena calidad.",21000,24000,23,puerta3.jpg,true
+29,Puerta doble corrediza de Madera,"Puerta mediana, de madera, corrediza y doble. De las mas normalitas que tenemos. Buena calidad.",10000,12000,15,puerta4.jpg,true
+30,Puerta de madera con ventanillas,"Puerta de madera con ventanitas difuminadoras, y gruesa. Perfecta para el baño.",6000,7000,20,puerta5.jpg,true

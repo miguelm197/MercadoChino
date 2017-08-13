@@ -15,76 +15,11 @@
 
 
     <header>
-        <div class="navbar-fixed">
 
-            <nav class="nav navPrincipalSinShad">
-                <div class="nav-wrapper navPrincipal">
-                    <!-- Logo de la barra de arriba -->
-                    <a href="#" class="brand-logo center">
-                        <p class="mercadochino">
-                            <part class="mc1">Mercado</part>
-                            <part class="mc2">Chino</part>
-                            <part class="mc3">.Uy</part>
-                        </p>
-                    </a>
-
-                    <!-- Links de la barra de arriba -->
-                    <ul id="nav-mobile" class="right hide-on-med-and-down menuArriba navPrincipalMenu">
-                        <li><a onclick="irInicio()">Inicio</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a onclick="irNosotros()">Nosotros</a></li>
-                        <li><a onclick="irContacto()">Contacto</a></li>
-                    </ul>
-                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
-                </div>
-
-                <!-- Menu desplegable del costado -->
-                <ul id="slide-out" class="side-nav">
-                    <li>
-                        <div class="background">
-                            <p class="mercadochino">
-                                <part class="mc1">Mercado</part>
-                                <part class="mc2">Chino</part>
-                                <part class="mc3">.Uy</part>
-                            </p>
-                        </div>
-                    </li>
-
-
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                    <li><a href="#"><span class="">Inicio</span></a></li>
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                    <li>
-                        <ul class="collapsible" data-collapsible="accordion">
-                            <li>
-                                <div class="collapsible-header">Productos </div>
-                                <div class="collapsible-body">
-                                    <ul class="collapsible sectorizado " data-collapsible="accordion"></ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                    <li><a href="#"><span class="">Nosotros</span></a></li>
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                    <li><a href="#"><span class="">Contacto</span></a></li>
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
     </header>
     <main>
-
+        <div class="modalLogin inactivo">
+        </div>
 
         <div class="desplegarVista">
             <!-- Element Showed -->
@@ -112,10 +47,15 @@
 
         <div class="container-fluid">
             <div class="vistaArticulo inactivo">
-                <div class="fondoArticulo"></div>
+                <div class="fondoArticulo" onclick="activarVistaProductos()"></div>
                 <div class="contenedorArticulo">
                     <div class="row portadaArticulo">
-                        <div class="imagen" id="imagenVP"></div>
+                        <div class="imagen">
+                            <div class="imgVP">
+                                <img id="imagenVP" class="materialboxed" width="100%" src="img/productos/cama.jpg">
+                            </div>
+                        </div>
+
                     </div>
                     <div class="row descripcionArticulo">
                         <div class="titulo"><span id="nombreVP">Nombre</span></div>
@@ -144,6 +84,7 @@
 
                         <button class="agregarAlCarrito red accent-4 btn inline" onclick="agregarAlCarrito()">Agregar al carrito</button>
                         <input type="number" class="numeric" id="cantidadArticulo" onchange="agregarCantidadProducto()">
+
                     </div>
                 </div>
             </div>
@@ -151,11 +92,7 @@
             <div class="row">
                 <!-- IZQUIERDA -->
                 <div class="col l2 m10 s12 offset-m1 columna-izquierda">
-                    <div class="row">
-                        <div class="contenedor-sectores" onclick="cargarProd()">
-                            Tocame
-                        </div>
-                    </div>
+
                     <div class="row">
                         <div class="contenedor-sectores">
                             <ul class="collapsible sectorizado" data-collapsible="accordion">
@@ -164,42 +101,15 @@
                     </div>
                 </div>
                 <!-- CENTRO -->
-                <div class="col l8 m10 s12 offset-m1 columna-central">
+                <div class="col l8 m12 s12 columna-central">
                     <div class="contenedor-sectores">
                         <div class="row contenedor-articulos">
-                            <!-- <div class="articulo col s12 m10 offset-m1 l3">
-                                <div class="row arriba">
-                                    <div class="izquierda col s4 m6 l5">
-                                        <div class="antes">
-                                            <div class="anterior">ANTES</div>
-                                            <div class="moneda">$</div>
-                                            <div class="monto">900</div>
-                                        </div>
-                                        <div class="descuento">
-                                            <div class="monto inline">20</div>
-                                            <div class="porcentaje inline">%</div>
-                                            <div class="off">OFF</div>
-                                        </div>
-                                        <div class="ahora">
-                                            <div class="ahorita">AHORA</div>
-                                            <div class="moneda inline b">$</div>
-                                            <div class="monto inline b">549</div>
-                                        </div>
-                                        <div class="vermas">Ver más</div>
-                                    </div>
-                                    <div class="derecha col s8 m6 l7">
-                                        <div class="imagen"></div>
-                                    </div>
-                                </div>
-                                <div class="row abajo">
-                                    <span>Lámpara</span>
-                                </div>
-                            </div> -->
+
                         </div>
                     </div>
                 </div>
                 <!-- DERECHA -->
-                <div class="col l2 m10 s12 offset-m2 columna-derecha">
+                <div class="col l2 m12 s12  columna-derecha">
                     <div class="contenedor-sectores">
 
                         <div class="row">
@@ -207,31 +117,12 @@
 
                                 <div class="row">
                                     <div class="total center">
-                                        <span>Carrito</span>
+                                        <h5>Carrito</h5>
                                     </div>
                                 </div>
 
                                 <div class="row contenedor-carrito">
 
-                                    <!-- <div class="tarjeta">
-                                        <div class="arriba">
-                                            <div class="imagen"></div>
-                                        </div>
-                                        <div class="abajo">
-                                            <div class="renglonUp">
-                                                <div class="nombre">Cama 2 plazas Aligato</div>
-                                            </div>
-                                            <div class="renglonDown">
-                                                <div class="monedaU inline">$</div>
-                                                <div class="montoU inline">0000</div>
-                                                <div class="cnatidad inline">0</div>
-                                                <div class="unidades inline">Unid.</div>
-                                                <div class="total inline">Total:</div>
-                                                <div class="monedaT inline">$</div>
-                                                <div class="montoT inline">10.000</div>
-                                            </div>
-                                        </div>
-                                    </div> -->
 
                                 </div>
                                 <div class="row">
@@ -239,10 +130,21 @@
                                         <span id="totalCarrito"></span>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="finalizarCompra">
+                                        <button class="finalizarCompra">
+                                            <i class="fa fa-cart-arrow-down fa-2x inline" aria-hidden="true"></i>
+                                            <h5 class="inline">Finalizar</h5>
+                                        </button>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
 
@@ -266,7 +168,7 @@
                     <ul>
                         <div class="row">
                             <div class="col m3 l3">
-                                <li><a class="grey-text text-lighten-3" onclick="irInicio()">Inicio</a></li>
+                                <li><a class="grey-text text-lighten-3" href="index.html">Inicio</a></li>
                             </div>
 
                             <div class="col m3 l3">
@@ -274,11 +176,11 @@
                             </div>
 
                             <div class="col m3 l3">
-                                <li><a class="grey-text text-lighten-3" onclick="irNosotros()">Nosotros</a></li>
+                                <li><a class="grey-text text-lighten-3" href="index.html">Nosotros</a></li>
                             </div>
 
                             <div class="col m3 l3">
-                                <li><a class="grey-text text-lighten-3" onclick="irContacto()">Contactos</a></li>
+                                <li><a class="grey-text text-lighten-3" href="index.html">Contactos</a></li>
                             </div>
                         </div>
                     </ul>

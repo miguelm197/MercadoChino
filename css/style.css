@@ -22,6 +22,16 @@
 .inline{
     display: inline;
 }
+.margin-top{
+    margin-top: 20px;
+}
+a:hover{
+    text-decoration:underline;
+}
+#toast-container{
+    z-index: 99999999 !important;
+}
+
 
 .parallax-container {
     height:600px; 
@@ -30,8 +40,6 @@
 .principalParallax img{
     width: 100%;
 }
-
-
 .carousel .siguiente{
     height: 100%;
     width: 40px;
@@ -126,7 +134,13 @@ body{
 }
 .nav .nav-wrapper *{
     color: black;
+    height: 69px !important;
 }
+
+.nav .nav-wrapper .login, .nav .nav-wrapper .usuario{
+    margin-left: 100px;
+}
+
 .nav li a{
     height: 100px !important;
 }
@@ -286,11 +300,62 @@ header .mercadochino .mc2{
     width: 100px !important;
     height: 100px !important;
     position: absolute !important;
-    left: 40%;
 }
 
 footer .mapa{
     width: 100%;
     height: 300px;
     border: none;
+}
+
+
+/*MODAL LOGIN*/
+.modalLogin{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+}
+.modalLogin .fondoLogin{
+    position: absolute;   
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .8;
+    z-index: 1;
+}
+.modalLogin .contenedorLogin{
+    position: absolute;   
+    background-color: white;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding-bottom: 40px;
+}
+.modalLogin .contenedorLogin .btn-entrar{
+    width: 70px !important;
+    height: 70px !important;
+    position: absolute !important;
+    top: 5px;
+}
+.modalLogin .contenedorLogin .btn-salir{
+    width: 55px !important;
+    height: 55px !important;
+    position: absolute !important;
+    top: 14px;
+    left: 90px;   
+}
+.modalLogin .contenedorLogin .enlaces{
+    position: absolute !important;
+    right: 0px;
+    cursor: pointer;
+    padding-right: 20px;
+}
+.modalLogin .contenedorLogin .enlaces a{
+    margin-left: 10px;
+}
+.modalLogin .contenedorLogin .row{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }

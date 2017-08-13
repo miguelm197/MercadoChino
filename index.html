@@ -13,137 +13,11 @@
 <body>
 
     <header>
-        <div class="navbar-fixed">
-
-            <nav class="nav navPrincipalSinShad">
-                <div class="nav-wrapper navPrincipal">
-                    <!-- Logo de la barra de arriba -->
-                    <a href="#" class="brand-logo center">
-                        <p class="mercadochino">
-                            <part class="mc1">Mercado</part>
-                            <part class="mc2">Chino</part>
-                            <part class="mc3">.Uy</part>
-                        </p>
-                    </a>
-
-                    <!-- Links de la barra de arriba -->
-                    <ul id="nav-mobile" class="right hide-on-med-and-down menuArriba navPrincipalMenu">
-                        <li><a onclick="irInicio()">Inicio</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a onclick="irNosotros()">Nosotros</a></li>
-                        <li><a onclick="irContacto()">Contacto</a></li>
-                    </ul>
-                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>
-                </div>
-
-                <!-- Menu desplegable del costado -->
-                <ul id="slide-out" class="side-nav">
-                    <li>
-                        <div class="background">
-                            <p class="mercadochino">
-                                <part class="mc1">Mercado</part>
-                                <part class="mc2">Chino</part>
-                                <part class="mc3">.Uy</part>
-                            </p>
-                        </div>
-                    </li>
-
-
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-
-                    <li><a href="#"><span class="">Inicio</span></a></li>
-
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-
-                    <li>
-                        <ul class="collapsible" data-collapsible="accordion">
-                            <li>
-                                <div class="collapsible-header">Productos </div>
-                                <div class="collapsible-body">
-
-                                    <ul class="collapsible" data-collapsible="accordion">
-                                        <li>
-                                            <div class="collapsible-header">Dormitorio</div>
-
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Camas</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Placares</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Lámparas</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Alfombras</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Cómodas</span></a></div>
-                                            <div class="divider"></div>
-                                        </li>
-                                        <li>
-                                            <div class="collapsible-header">Comedor</div>
-
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Mesas</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Sillas</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Cortinas</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Candelabros</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Manteles</span></a></div>
-                                            <div class="divider"></div>
-                                        </li>
-                                        <li>
-                                            <div class="collapsible-header">Cocina</div>
-
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Mesadas</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Placares</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Mesas</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Sillas</span></a></div>
-                                            <div class="divider"></div>
-                                            <div class="collapsible-body"><a><span>Electrodomésticos</span></a></div>
-                                            <div class="divider"></div>
-                                        </li>
-
-
-                                    </ul>
-
-                                </div>
-                            </li>
-
-                        </ul>
-                    </li>
-
-
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-
-                    <li><a href="#"><span class="">Nosotros</span></a></li>
-
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-
-                    <li><a href="#"><span class="">Contacto</span></a></li>
-
-
-
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
     </header>
     <main>
+
+        <div class="modalLogin inactivo">
+        </div>
 
         <div class="principalParallax portadaPrincipal">
             <button class="down1 mobile" onclick="irSeccion1()">V</button>
@@ -296,7 +170,7 @@
                             </div>
 
                             <div class="col m3 l3">
-                                <li><a class="grey-text text-lighten-3" href="#!">Productos</a></li>
+                                <li><a class="grey-text text-lighten-3" href="productos.html">Productos</a></li>
                             </div>
 
                             <div class="col m3 l3">
